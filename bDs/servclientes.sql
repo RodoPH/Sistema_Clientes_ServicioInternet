@@ -1,0 +1,465 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 01-06-2017 a las 21:04:30
+-- Versión del servidor: 10.1.21-MariaDB
+-- Versión de PHP: 5.6.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `servclientes`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `anios`
+--
+
+CREATE TABLE `anios` (
+  `id` int(11) NOT NULL,
+  `anio` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `anios`
+--
+
+INSERT INTO `anios` (`id`, `anio`) VALUES
+(1, '2017');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id_cliente` int(3) NOT NULL,
+  `ip` varchar(6) DEFAULT NULL,
+  `nombre` varchar(34) DEFAULT NULL,
+  `telefono` varchar(10) DEFAULT NULL,
+  `id_ubicacion` int(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id_cliente`, `ip`, `nombre`, `telefono`, `id_ubicacion`) VALUES
+(1, '104', 'JOVANI FELIPE', NULL, 1),
+(2, '106', 'JOSE CUTBERTO KATS', NULL, 1),
+(3, '107', 'HORTENCIA DOMINGUEZ', NULL, 1),
+(4, '108', 'MARIA DEL SOL DIAZ Y MARTINEZ', NULL, 1),
+(5, '109', 'ESTELA JAEN', NULL, 1),
+(6, '110', 'ELSA MORALES RAMIREZ', NULL, 1),
+(7, '111', 'GUILLERMO BADILLO', NULL, 1),
+(8, '112', 'BERNA IVETT', NULL, 1),
+(9, '113', 'LUIS TORIZ CASA', NULL, 1),
+(10, '115', 'MARIA DE LOS SANTOS MIRANDA', NULL, 1),
+(11, '116', 'INES CORTES ESCOBEDO', NULL, 1),
+(12, '117', 'PORFIRIO GUZMAN', NULL, 1),
+(13, '118', 'YADIRA OLIVA', NULL, 1),
+(14, '119', 'ORLANDO ORTEGA', NULL, 1),
+(15, '120', 'VERONICA CASTAÑEDA', NULL, 1),
+(16, '121', 'ERIBERTO ORTEGA', NULL, 1),
+(17, '122', 'MARLENE DEL CARMEN GARCIA', NULL, 1),
+(18, '123', 'LAURA IVET RODRIGUEZ ARMENTA', NULL, 1),
+(19, '124', 'RAUL MARIN LLANOS', NULL, 1),
+(20, '125', 'ROSAURA CORTES SANCHEZ', NULL, 1),
+(21, '126', 'ANA PETRA TORIBIO ZAYAS', NULL, 1),
+(22, '128', 'GABRIELA BRAVO PEREZ', NULL, 1),
+(23, '129', 'ENRIQUE TORRES CHAVEZ', NULL, 1),
+(24, '130', 'CHAVELO 3 NORMA ELIA', NULL, 1),
+(25, '132', 'ARACELI RIVERA', NULL, 1),
+(26, '133', 'LIZET FUERTES ALBERTO', NULL, 1),
+(27, '134', 'JOSEFINA BARRIOS', NULL, 1),
+(28, '135', NULL, NULL, 1),
+(29, '139', 'ADALUZ HERRERA SANTIGO', NULL, 1),
+(30, '140', 'HONORIA DOMINGUEZ', NULL, 1),
+(31, '144', 'TERE AGUIRRE GARCIA', NULL, 1),
+(32, '146', 'ZAIRA LISET DE LOS SANTOS MENDEZ', NULL, 1),
+(33, '149', 'ANA ROSA HERNANDEZ DIAZ', NULL, 1),
+(34, '151', 'MARIA DE LOS SANTOS MIRANDA 2', NULL, 1),
+(35, '153', 'FRANCISCA GONZALES MARTINEZ', NULL, 1),
+(36, '155', 'MA. DE LOS ANGELES SANCHEZ CHACON', NULL, 1),
+(37, '156', 'JOSEFA DE LOS SANTOS MIRANDA', NULL, 1),
+(38, '157', 'FATIMA LANDA', NULL, 1),
+(39, '159', 'ELVIA JANET DE LA CRUZ LOPEZ', NULL, 1),
+(40, '161', 'DAVID GALVAN (DANIELA)', NULL, 1),
+(41, '163', 'FRANCISCA RUIZ LAGUNEZ', NULL, 1),
+(42, '164', 'TELESECUNDARIA BUENOS AIRES', NULL, 1),
+(43, '166', 'ALEJANDRA RIVERA MENDOZA', NULL, 1),
+(44, '167', 'JUAN PABLO JUAREZ RAZO', NULL, 1),
+(45, '169', 'CHAVELO 1', NULL, 1),
+(46, '170', 'MANUEL MARIN 3', NULL, 1),
+(47, '171', 'MANUEL MARIN ABARCA', NULL, 1),
+(48, '172', 'MANUEL MARIN 2', NULL, 1),
+(49, '173', 'JOSUE DELFIN GOMEZ', NULL, 1),
+(50, '174', 'CLEMENCIA LAGUNEZ FRANCISCO', NULL, 1),
+(51, '181', 'TOMASA PABELLO VIVEROS', NULL, 1),
+(52, '183', 'JOSE LUIS LIBREROS', NULL, 1),
+(53, '190', 'HECTOR MARIN', NULL, 1),
+(54, '191', 'REFUGIO DIAZ ARCOS', NULL, 1),
+(55, '193', 'ANGELICA MARIA FUERTES', NULL, 1),
+(56, '198', 'ING. VALENTIN HERNANDEZ DIAZ', NULL, 1),
+(57, '205', 'ELSA GARCIA SALAZAR', NULL, 1),
+(58, '211', 'MITZI QUETZALI ROMERO', NULL, 1),
+(59, '213', 'GUILLERMO ROMAN', NULL, 1),
+(60, '214', 'MARIO MELGAREJO', NULL, 1),
+(61, '215', 'ARACELI REYES JUSTO', NULL, 1),
+(62, '216', 'MARIA GUADALUPE PINEDA GARCIA', NULL, 1),
+(63, '221', 'MARIBEL ZAVALETA HERRERA', NULL, 1),
+(64, '224', 'MARIA DE LOURDES ARCOS', NULL, 1),
+(65, '226', 'LUIS ANGEL ORTEGA HUESCA', NULL, 1),
+(66, '227', 'ANGELA GARCIA BARBADILLO ($350)', NULL, 1),
+(67, '233', 'FABIOLA CAYETANO ANDRADE', NULL, 1),
+(68, '236', 'SANDRA GUTIERREZ SANCHEZ', NULL, 1),
+(69, '237', 'MARIA ISABEL GARCIA', NULL, 1),
+(70, '238', 'EVELYN ROMERO VILLAGRAN', NULL, 1),
+(71, '7', 'JOSEFINA BARRIOS DELGADO', NULL, 2),
+(72, '33', 'PRIMA ELISA', NULL, 2),
+(73, '36', 'NAYELI CHACON', NULL, 2),
+(74, '39', 'RAMIRO CERRO DEL TIGRE', NULL, 2),
+(75, '41', 'XIHUITLAN YOLANDA', NULL, 2),
+(76, '42', 'TELESEC. CAPULIN', NULL, 2),
+(77, '43', NULL, NULL, 2),
+(78, '44', NULL, NULL, 2),
+(79, '45', NULL, NULL, 2),
+(80, '46', 'TELESEC. PLAN DE LA ESTRELLA', NULL, 2),
+(81, '47', 'LUISA HERNANDEZ TRIANO', NULL, 2),
+(82, '49', 'LUCERO IVON GOMEZ HERNANDEZ', NULL, 2),
+(83, '50', 'NINFA HERNANDEZ CAMACHO', NULL, 2),
+(84, '52', 'FLORIBERTA ORTEGA', NULL, 2),
+(85, '53', 'FRANCISCO BONILLA', NULL, 2),
+(86, '54', 'PLAN DE LA ESTRELLA JOVEN GRATIS', NULL, 2),
+(87, '98', 'ISIDORA RODRIGUEZ LOPEZ', NULL, 2),
+(88, '100CR2', 'HUMBERTO VAZQUEZ PRIM. GALERAS', NULL, 2),
+(89, '100', 'CARLOS SANTOS MODESTO', NULL, 2),
+(90, '101', 'TELESEC LOMAS DE FCO. I MADERO', NULL, 2),
+(91, '101mis', 'ROSA VERONICA ABURTO RUIZ', NULL, 2),
+(92, '103', 'ANGEL DIAZ ARROYO', NULL, 2),
+(93, '105', 'TELESEC MIRASOL', NULL, 2),
+(94, '107', 'PETRA VELAZQUEZ ZETERA', NULL, 2),
+(95, '111', 'VERONICO JIMENEZ HERNANDEZ', NULL, 2),
+(96, '116', 'CANDE MUÑOZ GUTIERREZ', NULL, 2),
+(97, '117', 'AMADO GRAJALES', NULL, 2),
+(98, '121', 'ELSA VARGAS', NULL, 2),
+(99, '122', 'IRMA MORA AVILA', NULL, 2),
+(100, '123', 'MARIA HILARIA CAMACHO VELEZ', NULL, 2),
+(101, '125', 'ESTELA VAZQUEZ ARIETA', NULL, 2),
+(102, '126', 'TERESA RAMIREZ DELGADO', NULL, 2),
+(103, '127', 'NORA ENITH LEON SALAS', NULL, 2),
+(104, '129', 'KENI 1', NULL, 2),
+(105, '130', 'EUGENIO GUADALUPE ALARCON', NULL, 2),
+(106, '131', 'TRAPICHES TELESECUNDARIA', NULL, 2),
+(107, '132', 'ADAN FIGUEROA', NULL, 2),
+(108, '133', 'CHANGO', NULL, 2),
+(109, '138', 'RAEL HERNANDEZ FILETES SOCIO', NULL, 2),
+(110, '139', 'RUBI HERNANDEZ PEREZ', NULL, 2),
+(111, '141', 'GRACIELA FISHER SOSA', NULL, 2),
+(112, '142', 'ROBERTA DORANTES MORA', NULL, 2),
+(113, '143', 'AGUEDA RODRIGUEZ JAEN', NULL, 2),
+(114, '144', 'GABINA CASTILLO BALTAZAR', NULL, 2),
+(115, '145', 'GUSTAVO SANCHEZ AGUILAR', NULL, 2),
+(116, '148', 'ARTURO GARCIA RENDON', NULL, 2),
+(117, '149', 'CRESCENCIO CHAVEZ', NULL, 2),
+(118, '158', 'VALENTIN OLOARTE ZETERA', NULL, 2),
+(119, '159', 'EXON PONCE', NULL, 2),
+(120, '160', 'ARACELI TRIANO REYES', NULL, 2),
+(121, '161', 'YOLANDA GARCIA PEREZ', NULL, 2),
+(122, '178', 'ARTURO SOTO', NULL, 2),
+(123, '179', NULL, NULL, 2),
+(124, '180', 'MARCELO FERNANDEZ CHAVEZ', NULL, 2),
+(125, '181', NULL, NULL, 2),
+(126, '182', NULL, NULL, 2),
+(127, '183', 'TOMASA LANDA', NULL, 2),
+(128, '185', 'CRISTINA FERNANDEZA HERNANDEZ', NULL, 2),
+(129, '186', 'JOSE FERNANDEZ', NULL, 2),
+(130, '187', 'ELIZABETH SANCHEZ BARRADAS', NULL, 2),
+(131, '188', 'NEYRA ALICIA BELLO ARCOS', NULL, 2),
+(132, '189', NULL, NULL, 2),
+(133, '190', NULL, NULL, 2),
+(134, '191', NULL, NULL, 2),
+(135, '192', 'NORMA CHAVEZ RAMIREZ', NULL, 2),
+(136, '193', 'JOSE LUIS AGUILAR TINOCO', NULL, 2),
+(137, '194', 'JUAN DIAZ PEREZ', NULL, 2),
+(138, '195', NULL, NULL, 2),
+(139, '196', NULL, NULL, 2),
+(140, '197', 'ITZEL MARTINEZ HERNANDEZ', NULL, 2),
+(141, '198', NULL, NULL, 2),
+(142, '199', 'EUFROSINA HERNANDEZ', NULL, 2),
+(143, '200', 'MARICELA HERNANDEZ AGUIRRE', NULL, 2),
+(144, '97', 'CAROLINA AVILA HERNANDEZ', NULL, 3),
+(145, '98', 'LEONOR GRATIS', NULL, 3),
+(146, '99', 'NANCY RODRIGUEZ VALENCIA', NULL, 3),
+(147, '102', 'CLAUDIA MATEOS PEREZ', NULL, 3),
+(148, '103', 'LORENA REYES AGUILAR', NULL, 3),
+(149, '104', 'RAFAEL GARCIA LEON', NULL, 3),
+(150, '105', 'ROSA EDIT MARIN RAMIREZ', NULL, 3),
+(151, '106', 'YOLANDA CORTINA', NULL, 3),
+(152, '108', 'CHELA BARBADILLO', NULL, 3),
+(153, '110', 'PRIM. AMPARO JAIMES', NULL, 3),
+(154, '113', 'JUANA GUERRERO VARGAS', NULL, 3),
+(155, '114', 'CIRA HERNANDEZ VELAZQUEZ', NULL, 3),
+(156, '115', 'REGINA ORDUÑA CAMACHO', NULL, 3),
+(157, '116', 'MISAEL MOGOLLON', NULL, 3),
+(158, '117', 'NANCY AGUILAR FERNANDEZ', NULL, 3),
+(159, '118', 'BALBINA SIMON DEL ANGEL', NULL, 3),
+(160, '119', 'MARIA LUISA RUIZ CAMACHO', NULL, 3),
+(161, '120', 'LUIS ALBERTO GARCIA CONTRERAS', NULL, 3),
+(162, '121', 'RUBEN TRINIDAD GUERRERO', NULL, 3),
+(163, '122', 'SILVIA DE LOS SANTOS GARCIA', NULL, 3),
+(164, '123', 'PROF. ROMAN', NULL, 3),
+(165, '124', 'ISIDORA HERNANDEZ MEZA', NULL, 3),
+(166, '125', 'JOSE LUIS ACOSTA', NULL, 3),
+(167, '128', 'MARIA DEL CARMEN GARCIA BARBADILLO', NULL, 3),
+(168, '138', 'ROCIO IVET CABAÑAS', NULL, 3),
+(169, '141', 'DALILA SIN COSTO', NULL, 3),
+(170, '145', 'VICTOR HUGO MORELOS ARGUELLES', NULL, 3),
+(171, '147', 'MARCO ANTONIO JIMENEZ Y RODRIGUEZ', NULL, 3),
+(172, '160', 'JOSE ALEJANDRO CORTEZ ACOSTA', NULL, 3),
+(173, '162', 'JUAN HERNANDEZ', NULL, 3),
+(174, '165', 'JOSUE BENIGNO ALEJANDRO', NULL, 3),
+(175, '168', 'LUIS FERNANDO FERNANDEZ ANDRADE', NULL, 3),
+(176, '170', 'PROFRA. SERENO', NULL, 3),
+(177, '175', 'ELIZABETH DÍAZ DE LA CRUZ', NULL, 3),
+(178, '176', 'BEATRIZ LOPEZ GARCIA', NULL, 3),
+(179, '177', 'JOSE CONCEPCIÓN', NULL, 3),
+(180, '179', 'LUIS CAMACHO TRUJILLO', NULL, 3),
+(181, '186', 'MARIA AZUCENA ORDUÑA', NULL, 3),
+(182, '187', 'CIRIA LILIANA LUNA CASTILLO', NULL, 3),
+(183, '189', 'CESAR ESCANDON MORALES', NULL, 3),
+(184, '191', 'FELIPE DE JESUS GARCIA', NULL, 3),
+(185, '192', 'LUIS ENRIQUE AGUILAR GARCIA', NULL, 3),
+(186, '195', 'RAYMUNDO MATEO LUIS', NULL, 3),
+(187, '196', 'CORNELIO RAMIREZ', NULL, 3),
+(188, '201', 'NARCISA TRINIDAD', NULL, 3),
+(189, '202', 'TELESEC KILATE', NULL, 3),
+(190, '203', 'KILATE PRIMARIA', NULL, 3),
+(191, '206', 'JUAN MARIN', NULL, 3),
+(192, '227', 'SARA ALEXIS LAGUNEZ JAEN', NULL, 3),
+(193, '228', 'LUCI HERNANDEZ MOLINA', NULL, 3),
+(194, '229', 'PRIM. ARROYO HONDO SIN COSTO', NULL, 3),
+(195, '230', 'ORLANDA LAGUNEZ LEON', NULL, 3),
+(196, '239', 'CLARA SANTIAGO GARCIA', NULL, 3),
+(197, '226', 'MANUEL ALEJANDRO ORDUÑA TELLEZ', NULL, 3),
+(198, '16', 'ISAIAI ZAYAS', NULL, 3),
+(199, '135', 'CIBER TEJEDA', NULL, 3),
+(200, '129', 'JOSE MAURO PEÑA RAMIREZ', NULL, 3),
+(201, '130', 'BRIAN ERIBERTO GARCIA RAMIREZ', NULL, 3),
+(202, '131', 'BERNABE QUIÑONEZ TORRES', NULL, 3),
+(203, '103', 'ERNESTO LAGUNES ROMERO', NULL, 5),
+(204, '104', 'GUADALUPE DURAN SANTIAGO', NULL, 5),
+(205, '105', 'FELIPE ZAMORA', NULL, 5),
+(206, '106', 'LIDIA HERNANDEZ', NULL, 5),
+(207, '107', NULL, NULL, 5),
+(208, '108', 'DOMINGA SANTIAGO LOPEZ', NULL, 5),
+(209, '109', 'MA. NIEVES HERNANDEZ SANTIAGO', NULL, 5),
+(210, '110', 'SAMUEL GARCIA HERNANDEZ', NULL, 5),
+(211, '111', 'BUENA VISTA (MARTINES)', NULL, 5),
+(212, '112', 'TELESECUNDARIA COLORADO', NULL, 5),
+(213, '114', 'SALVADOR HERNANDEZ GARCIA', NULL, 5),
+(214, '115', 'ALFREDO HERNANDEZ', NULL, 5),
+(215, '116', 'LUIS SANCHEZ HERNANDEZ', NULL, 5),
+(216, '122', 'CHUCHO COLORADO', NULL, 5),
+(217, '123', 'PRIMARIA COLORADO', NULL, 5),
+(218, '124', 'FRANCISCO HERNANDEZ SANCHEZ', NULL, 5),
+(219, '135', 'MARTHA CARRETO', NULL, 5),
+(220, '141', 'TENOCH AYUNTAMIENTO', NULL, 5),
+(221, '144', 'DIF TENOCH', NULL, 5),
+(222, '155', 'JUAN DANIEL SANCHEZ GARCIA', NULL, 5),
+(223, '158', 'ALVARO SANTIAGO SANCHEZ', NULL, 5),
+(224, '159', 'GUILLERMINA SANTIAGO LUNA', NULL, 5),
+(225, '163', 'ERNESTO HERNANDEZ', NULL, 5),
+(226, '186', 'FELIPE GABRIEL HERNANDEZ', NULL, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cobro`
+--
+
+CREATE TABLE `cobro` (
+  `id` int(11) NOT NULL,
+  `folio_Pago` varchar(10) DEFAULT NULL,
+  `id_anio` int(11) DEFAULT NULL,
+  `id_mes` int(11) DEFAULT NULL,
+  `id_cliente` int(11) DEFAULT NULL,
+  `id_ubicacion` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `meses`
+--
+
+CREATE TABLE `meses` (
+  `id` int(11) NOT NULL,
+  `mes` tinytext
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `meses`
+--
+
+INSERT INTO `meses` (`id`, `mes`) VALUES
+(1, 'Enero'),
+(2, 'Febrero'),
+(3, 'Marzo'),
+(4, 'Abril'),
+(5, 'Mayo'),
+(6, 'Junio'),
+(7, 'Julio'),
+(8, 'Agosto'),
+(9, 'Septiembre'),
+(10, 'Octubre'),
+(11, 'Noviembre'),
+(12, 'Diciembre');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ubicacion`
+--
+
+CREATE TABLE `ubicacion` (
+  `id` int(11) NOT NULL,
+  `ubicacion` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ubicacion`
+--
+
+INSERT INTO `ubicacion` (`id`, `ubicacion`) VALUES
+(1, 'TIENDA Y2K'),
+(2, 'CREARTE'),
+(3, 'CASA DE EFRÉN'),
+(4, 'MARTÍNEZ (TENOHC Y COLORADO');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `usr` text,
+  `pass` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `usr`, `pass`) VALUES
+(1, 'usuario', 'holaMundo001');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `anios`
+--
+ALTER TABLE `anios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id_cliente`),
+  ADD KEY `id_ubicacion` (`id_ubicacion`);
+
+--
+-- Indices de la tabla `cobro`
+--
+ALTER TABLE `cobro`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_anio` (`id_anio`,`id_mes`,`id_cliente`,`id_ubicacion`),
+  ADD KEY `id_cliente` (`id_cliente`),
+  ADD KEY `id_mes` (`id_mes`),
+  ADD KEY `id_ubicacion` (`id_ubicacion`);
+
+--
+-- Indices de la tabla `meses`
+--
+ALTER TABLE `meses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `ubicacion`
+--
+ALTER TABLE `ubicacion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `anios`
+--
+ALTER TABLE `anios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id_cliente` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
+--
+-- AUTO_INCREMENT de la tabla `cobro`
+--
+ALTER TABLE `cobro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `meses`
+--
+ALTER TABLE `meses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT de la tabla `ubicacion`
+--
+ALTER TABLE `ubicacion`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `cobro`
+--
+ALTER TABLE `cobro`
+  ADD CONSTRAINT `cobro_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `cobro_ibfk_2` FOREIGN KEY (`id_mes`) REFERENCES `meses` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `cobro_ibfk_3` FOREIGN KEY (`id_anio`) REFERENCES `anios` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  ADD CONSTRAINT `cobro_ibfk_4` FOREIGN KEY (`id_ubicacion`) REFERENCES `ubicacion` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
